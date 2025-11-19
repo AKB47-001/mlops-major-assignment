@@ -1,11 +1,9 @@
 # Loads Olivetti faces, trains DecisionTreeClassifier, saves model (and test data) as savedmodel.pth
-
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import joblib
-
 
 # Loading Olivetti faces dataset and split into train/test.
 # test_size=0.3 -> 30% test, 70% train
