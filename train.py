@@ -6,7 +6,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import joblib
 
-
 # Loading Olivetti faces dataset and split into train/test.
 # test_size=0.3 -> 30% test, 70% train
 def load_data(test_size=0.3, random_state=42):    
@@ -16,7 +15,6 @@ def load_data(test_size=0.3, random_state=42):
         X, y, test_size=test_size, random_state=random_state, stratify=y
     )
     return X_train, X_test, y_train, y_test
-
 
 def main():
     X_train, X_test, y_train, y_test = load_data()
