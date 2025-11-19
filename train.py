@@ -20,15 +20,13 @@ def main():
     X_train, X_test, y_train, y_test = load_data()
 
     clf = DecisionTreeClassifier(random_state=42)
-    clf.fit(X_train, y_train)
-
-    # Save both model and test set so test.py can reuse them
+    clf.fit(X_train, y_train)    
     joblib.dump(
         {"model": clf, "X_test": X_test, "y_test": y_test},
         "savedmodel.pth"
     )
 
-    # Optional quick check
+    
     y_pred = clf.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
     print(f"[train.py] Quick test accuracy: {acc:.4f}")
